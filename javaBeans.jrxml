@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="javaBeans" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="584e6996-57ca-4fb4-97c4-e6fee68adb26">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<rectangle>
+				<reportElement x="60" y="0" width="470" height="30" backcolor="#6DADF2" uuid="46070a92-5913-4b1d-81d5-32866896d3ff"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="130" y="3" width="314" height="25" uuid="2ed230ca-fef2-4512-9c2b-fe1a2dcf70e7"/>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[The Company Name]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="50" height="40" uuid="1e732760-3323-406f-87d5-f438ef67e495"/>
+				<imageExpression><![CDATA["image/intel.png"]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="380" y="30" width="80" height="30" uuid="98e1c118-fa03-472d-8d7d-d7f36342e868"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="460" y="30" width="70" height="30" uuid="fb69777d-abc7-4ba5-97c0-66a215a75523"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-1" y="30" width="551" height="25" uuid="920aad20-a806-4131-93a1-e5e77d3ca160"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="16"/>
+				</textElement>
+				<text><![CDATA[Analysis Report]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="40" width="50" height="19" uuid="9babc463-f875-4ecd-9977-f9cf69252a60"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AGE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="40" width="50" height="20" uuid="1b407b1f-7c4b-4f05-ba64-8fe450e36980"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CITY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="60" height="20" uuid="dc5ee1a4-f0de-4d18-aecc-5331ed6e6e7d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="40" width="60" height="20" uuid="22b9e52f-1e27-46cc-8788-408a67ca6735"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="535" height="30" uuid="5bdb0ead-708f-49ca-b0c7-6ed3a3d715e6"/>
+				<text><![CDATA[Approved by :                      Reviewed by :                       Prepared by : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="350" y="0" width="100" height="30" uuid="1ca57ce8-a2fd-453a-b1c8-0ed4d758abf5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="450" y="0" width="100" height="30" uuid="17a2b2be-3ee7-4aa5-b1ac-635cf2161b72"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="35" width="555" height="28" backcolor="#7DB1F5" uuid="429f4597-7f64-4ca6-aea6-4a09fba995d2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="80" y="40" width="377" height="18" uuid="3ac1f2fb-2b7f-4f20-9e5e-9fe13149f4bb"/>
+				<textElement>
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[The company address : ....]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
